@@ -3,6 +3,7 @@
  */
 var Jvent = require('jvent');
 var decouple = require('decouple');
+var orientation = require('o9n').orientation;
 
 /**
  * Scope variables
@@ -57,7 +58,7 @@ Viewport.prototype.calculateDeviceDimensions = function calculateDeviceDimension
   this.device = {};
   this.device.height = win.screen.height;
   this.device.width = win.screen.width;
-  this.device.orientation = win.screen.orientation.type;
+  this.device.orientation = orientation.type;
   return this;
 };
 
@@ -106,7 +107,7 @@ Viewport.prototype.calculateOffset = function calculateOffset() {
  * Returns the device orientation: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`.
  */
 Viewport.prototype.calculateOrientation = function calculateOrientation() {
-  this.device.orientation = win.screen.orientation.type;
+  this.device.orientation = orientation.type;
   return this;
 };
 

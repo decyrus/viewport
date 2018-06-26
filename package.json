@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "decouple": "1.0.1",
-    "jvent": "1.0.2"
+    "jvent": "1.0.2",
+    "o9n": "2.0.1"
   },
   "devDependencies": {
     "better-assert": "1.0.2",
